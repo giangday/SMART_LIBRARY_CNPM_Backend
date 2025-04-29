@@ -1,0 +1,37 @@
+{
+  "name": "smart_library_cnpm_backend",
+  "version": "1.0.0",
+  "description": "Backend cho hệ thống quản lý thư viện thông minh HCMUT_SSPS.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giangday/SMART_LIBRARY_CNPM_Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/giangday/SMART_LIBRARY_CNPM_Backend/issues"
+  },
+  "homepage": "https://github.com/giangday/SMART_LIBRARY_CNPM_Backend#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.14.1",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
