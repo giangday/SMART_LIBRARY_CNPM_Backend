@@ -28,7 +28,7 @@ curl -X PUT http://localhost:8080/api/users/11 -H "Content-Type: application/jso
 curl -X DELETE http://localhost:8080/api/users/11 -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiRW1haWwiOiJhQGhjbXV0LmVkdS52biIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NjAxNjI5OCwiZXhwIjoxNzQ2MTAyNjk4fQ.NY9qNMI631GfuYzZ6tS7vK335dgIW-hevkmyb7KTUCA"
 
 
-REPORTS ROUTE (FOR STAFF ONLY)
+REPORTS ROUTE (FOR ADMIN ONLY)
 
 curl -X POST http://localhost:8080/api/reports/generate -H "Content-Type: application/json" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiRW1haWwiOiJhQGhjbXV0LmVkdS52biIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NjAyMjEyNCwiZXhwIjoxNzQ2MTA4NTI0fQ.YYc0yCf5czIwZbuqjr3SvZoeIBRVbsJ1ZcqVLR2IeXM" -d "{\"Report_Date\":\"2025-04-30\",\"Content\":\"Report content here\",\"Date_Sent\":\"2025-04-30\",\"Amount\":100,\"MSNV_Staff_Report\":123456}"
 curl -X GET http://localhost:8080/api/reports/view -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiRW1haWwiOiJhQGhjbXV0LmVkdS52biIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NjAyMjEyNCwiZXhwIjoxNzQ2MTA4NTI0fQ.YYc0yCf5czIwZbuqjr3SvZoeIBRVbsJ1ZcqVLR2IeXM"
@@ -36,9 +36,9 @@ curl -X PUT http://localhost:8080/api/reports/update/1 -H "Content-Type: applica
 curl -X DELETE http://localhost:8080/api/reports/delete/1 -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiRW1haWwiOiJhQGhjbXV0LmVkdS52biIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NjAyMjEyNCwiZXhwIjoxNzQ2MTA4NTI0fQ.YYc0yCf5czIwZbuqjr3SvZoeIBRVbsJ1ZcqVLR2IeXM"
 
 
+Ghi chú:
 
 CÁC ROUTE ĐANG ĐƯỢC TEST Ở node server.js 
-
 CHƯA CÓ forgot-password do chưa lưu được reset token vào database
 
 
