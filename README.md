@@ -62,4 +62,53 @@ Ghi chú:
 
 CÁC ROUTE ĐANG ĐƯỢC TEST Ở node server.js 
 CHƯA CÓ forgot-password do chưa lưu được reset token vào database
+# Get all notifications
+curl -X GET http://localhost:8080/api/notifications -H "Authorization: Bearer <your_token>"
 
+# Get a specific notification by ID
+curl -X GET http://localhost:8080/api/notifications/1 -H "Authorization: Bearer <your_token>"
+
+# Create a new notification
+curl -X POST http://localhost:8080/api/notifications -H "Content-Type: application/json" -H "Authorization: Bearer <your_token>" -d "{
+  \"Statistical\": \"Thông báo thiết bị\",
+  \"Content\": \"Bảo trì máy chiếu phòng 101\",
+  \"Date_s\": \"2025-04-10\",
+  \"Read_s\": \"F\",
+  \"News\": \"T\",
+  \"Notification_Before_Time\": \"2025-04-09 09:00:00\",
+  \"MSSV_Notification\": 2010001,
+  \"MSNV_Admin_Notification\": 30001
+}"
+# Update a notification by ID
+curl -X PUT http://localhost:8080/api/notifications/1 -H "Content-Type: application/json" -H "Authorization: Bearer <your_token>" -d "{
+  \"Content\": \"Updated notification content\",
+  \"Read_s\": \"T\"
+}"
+
+# Delete a notification by ID
+curl -X DELETE http://localhost:8080/api/notifications/1 -H "Authorization: Bearer <your_token>"
+# Get all equipment
+curl -X GET http://localhost:8080/api/equipment -H "Authorization: Bearer <your_token>"
+
+# Get a specific equipment by ID
+curl -X GET http://localhost:8080/api/equipment/501 -H "Authorization: Bearer <your_token>"
+
+# Create a new equipment
+curl -X POST http://localhost:8080/api/equipment -H "Content-Type: application/json" -H "Authorization: Bearer <your_token>" -d "{
+  \"MTB\": 505,
+  \"Name_s\": \"Máy in\",
+  \"Amount\": 1,
+  \"TimeStart\": \"2025-05-01 08:00:00\",
+  \"TimeEnd\": \"2025-05-01 10:00:00\",
+  \"Status\": \"Tốt\",
+  \"MSSV_Equipment\": 2010002,
+  \"MSNV_Staff_Equipment\": 40001
+}"
+
+# Update equipment by ID
+curl -X PUT http://localhost:8080/api/equipment/501 -H "Content-Type: application/json" -H "Authorization: Bearer <your_token>" -d "{
+  \"Status\": \"Bảo trì\"
+}"
+
+# Delete equipment by ID
+curl -X DELETE http://localhost:8080/api/equipment/501 -H "Authorization: Bearer <your_token>"
