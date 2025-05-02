@@ -79,6 +79,11 @@ curl -X POST http://localhost:8080/api/notifications -H "Content-Type: applicati
   \"MSSV_Notification\": 2010001,
   \"MSNV_Admin_Notification\": 30001
 }"
+
+
+
+VD:
+curl -X POST http://localhost:8080/api/equipment -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsIkVtYWlsIjoicGh1Yy5ob2FuZzEwNTIwMDRAaGNtdXQuZWR1LnZuIiwicm9sZSI6InN0YWZmIiwiaWF0IjoxNzQ2MjE5Mzg5LCJleHAiOjE3NDYzMDU3ODl9.jifboirr2N6UQeThuI9_ninkzaC9VuuPARPCp3dV4kc" -H "Content-Type: application/json" -d "{\"MTB\":505,\"Name_s\":\"Máy in\",\"Amount\":1,\"TimeStart\":\"2025-05-01 08:00:00\",\"TimeEnd\":\"2025-05-01 10:00:00\",\"Status\":\"Tốt\",\"MSSV_Equipment\":2010001,\"MSNV_Staff_Equipment\":40001}"
 # Update a notification by ID
 curl -X PUT http://localhost:8080/api/notifications/1 -H "Content-Type: application/json" -H "Authorization: Bearer <your_token>" -d "{
   \"Content\": \"Updated notification content\",
